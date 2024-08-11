@@ -26,14 +26,6 @@ function App(){
         },
     ]);
 
-    // function changeSheetSize(width, height){
-    //     setSheetSize({width, height});
-    // }
-
-    // function changeRects(rects){
-    //     setRects(rects);
-    // }
-
     function serialize(blockTypes) {
         let str = "";
         for (let i = 0; i < blockTypes.length; i++) {
@@ -51,8 +43,8 @@ function App(){
             const block = blocks[i].split("x");
             if (block.length >= 2) {
                 result.push({
-                    w: parseInt(block[0]),
-                    h: parseInt(block[1]),
+                    w: +parseFloat(block[0]).toFixed(1),
+                    h: +parseFloat(block[1]).toFixed(1),
                     num: block.length === 2 ? 1 : parseInt(block[2]),
                 });
             }

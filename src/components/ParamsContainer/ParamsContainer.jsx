@@ -6,29 +6,10 @@ function ParamsContainer({sheetSize, rects}){
         <div className="params-container">
             <ParamsTitle title="Sheet size (in * 72 / 6)" />
             {`${sheetSize.width} x ${sheetSize.height}`}
-            {/* <form id="sheet-form" action="">
-                <label htmlFor="">
-                    width: <input type="text" />
-                </label>
-                <label htmlFor="">
-                    height: <input type="text" />
-                </label>
-            </form> */}
             <ParamsTitle title="Rectangle size (in * 72 / 6)" />
             {rectsArr.map((rect) => {
                 return <div key={rect}>{rect}</div>;
             })}
-            {/* <form id="rect-form" action="">
-                <label htmlFor="">
-                    width: <input type="text" />
-                </label>
-                <label htmlFor="">
-                    height: <input type="text" />
-                </label>
-                <label htmlFor="">
-                    count: <input type="text" />
-                </label>
-            </form> */}
         </div>
     );
 }
